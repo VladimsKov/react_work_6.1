@@ -1,38 +1,114 @@
-.App {
+.container {
+  width: 50%;
+  min-width: 250px;
+  margin: 100px auto 0;
+  padding: 10px;
+  font-size: 12px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.inputfield {
+  display: block;
+  width: 100px;
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 30px;
   text-align: center;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-table {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.block {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.output-block {
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 300px;
+  max-height: 600px;
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  list-style-type: none; 
+  overflow: auto; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#btn {
+  background-color: transparent;  
+}
+
+#btn:hover {
+  cursor: pointer;
+}
+
+.del-btn {
+  background-image: url(/src/img/svg/del-ctrl.svg);
+}
+
+.form-btn {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 0 0 auto;
+  border: none;
+  background-size: 70%;
+  background-repeat: no-repeat; 
+  background-position: center;
+  background-color: transparent;
+  border: 1px solid gray;
+  border-radius: 50%; 
+}
+.form-btn, #btn:hover {
+  cursor: pointer;
+}
+.clockelem {
+  width: 100px;
+  margin: 20px;
+}
+.clockelem span {
+display: block;  
+text-align: center;
+}
+
+.clock {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border: 1px solid gray;
+  border-radius: 50%;
+}
+.arrow {
+  position: absolute;  
+  transform-origin: 50% 100%;
+}
+.sec {
+  top: calc(50% - 45px);
+  left: 50%;
+  width: 1px;
+  height: 45px;
+  background-color: red;  
+}
+.min {
+  top: calc(50% - 40px);
+  left: calc(50% - 1px);
+  width: 2px;
+  height: 40px;
+  background-color: gray; 
+}
+.hour {
+ top: calc(50% - 25px);
+ left: calc(50% - 2px);
+  width: 4px;
+  height: 25px;
+  background-color: gray;  
 }
